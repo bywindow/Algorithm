@@ -11,7 +11,6 @@ public class BOJ2606 {
     static int[] visited;
 
     static void bfs(int start){
-        //큐의 길이가 가장 길 때에서 -1을 하면 바이러스가 전파된 컴퓨터의 개수가 된다
         Queue<Integer> q = new LinkedList<>();
         q.offer(start);
         visited[start] = 1;
@@ -21,7 +20,7 @@ public class BOJ2606 {
                 if(visited[i]==0 && edge[cur][i]==1){
                     q.offer(i);
                     visited[i] = 1;
-                    answer+=1;
+                    answer+=1;//큐에 새로운 것이 추가될 때마다 +1을 해준다
                 }
             }
         }
