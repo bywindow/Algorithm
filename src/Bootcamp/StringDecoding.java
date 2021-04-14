@@ -15,7 +15,7 @@ public class StringDecoding {
         }
         //숫자를 만났을 때
         else if(input_str.charAt(cur_pos)>=48&&input_str.charAt(cur_pos)<=57){
-            update_str += update_str.repeat((input_str.charAt(cur_pos)-'0')-1);
+            //update_str += update_str.repeat((input_str.charAt(cur_pos)-'0')-1);
             return recur(input_str,cur_pos-1,update_str);
         }
         //문자를 만났을 때
