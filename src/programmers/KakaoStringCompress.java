@@ -33,7 +33,7 @@ public class KakaoStringCompress {
     }
 
     public static void main(String[] args) {
-        System.out.println(solution("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
+        System.out.println(solution("ababababcasdksadkjfas"));
     }
 
 }
