@@ -14,7 +14,7 @@ public class BOJ11053 {
          * 수열 배열을 돌면서 현재의 수가 수열들 중 몇 번째로 큰 수인지 기록한다
          * dp[0] = 1 , 자기자신을 포함해서 카운팅한다
          * dp[1]부터 시작해서 arr[1]이 arr[0]보다 작으면 dp[1]=1, 크면 dp[1]=dp[0]+1
-         * 만약 arr[m]이 arr[0]~arr[m-1] 중에서 가장 크다면 dp[m]은 max(dp[0]~dp[m-1])
+         * 만약 arr[m]이 arr[0]~arr[m-1] 중에서 가장 크다면 dp[m]은 max(dp[0]~dp[m-1])+1
          */
 
         int n = Integer.parseInt(st.nextToken());
