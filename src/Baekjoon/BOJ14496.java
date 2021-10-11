@@ -19,7 +19,6 @@ public class BOJ14496 {
         st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-
         ArrayList<Integer>[] list = new ArrayList[n+1];
         for(int i = 0; i < list.length; i++){
             list[i] = new ArrayList<Integer>();
@@ -40,7 +39,6 @@ public class BOJ14496 {
         boolean[] visited = new boolean[n+1];
         pq.add(new int[] {start, 0});//시작하는 문자 삽입
         visited[start] = true;
-
         while(!pq.isEmpty()){
             int[] cur = pq.poll();//[0]은 현재 문자, [1]은 변환 횟수
             //end와 같은 수가 발견되면 답 비교
