@@ -10,14 +10,22 @@ public class BOJ1074 {
   static int n;
   static int r;
   static int c;
-  static int[][] map;
+  static long[][] map;
+  static long cnt;
 
-  static void recur(int cnt, int n){
-    if(n == 1){
+  static void recur(int n, int r, int c){
 
+    if(n == 0){
+      map[r][c] = cnt;
+      cnt++;
+      return;
     }
+
     else{
-      recur(cnt, n-1);
+      recur(n-1, r/2, c/2);
+      recur(n-1, r/2, c); //r,c : 배열의 길이
+      recur(n-1, r, c/2);
+      recur(n-1, r, c);
     }
   }
 
@@ -28,9 +36,10 @@ public class BOJ1074 {
     r = Integer.parseInt(st.nextToken());
     c = Integer.parseInt(st.nextToken());
 
-    long cnt = 0;
-    map = new int[r][c];
-
-
+    cnt = 0;
+    int len = (int) Math.pow(2, n);
+    map = new long[len][len];
+    recur(n, len, len);
+    System.out.println((int) map[r][c]);
   }
 }
