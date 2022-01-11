@@ -3,29 +3,38 @@ package Baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class BOJ1074 {
 
+  /**
+   * 목표좌표가 있는 곳의 숫자만 확인한다. 모든 칸을 방문하면 시간초과 남
+   */
+
   static int n;
   static int r;
   static int c;
-  static long[][] map;
-  static long cnt;
+  static long cnt, answer;
 
-  static void recur(int n, int r, int c){
-
-    if(n == 0){
-      map[r][c] = cnt;
-      cnt++;
+  static void recur(int n, int curR, int curC){
+    // (0,0)에서 시작
+    // 해당 칸에 도착하면
+    if(r == curR && c == curC){
+      answer = cnt;
       return;
     }
-
+    // (r,c)가 범위 안에 있으면 재귀
+    if(curR <= r && r < curR+n && curC <= c && c < curC+n){
+      int curN = n/2;
+      recur(curN, curR, curC);
+      recur(curN, curR, curC+curN);
+      recur(curN, curR+curN, curC);
+      recur(curN, curR+curN, curC+curN);
+    }
     else{
-      recur(n-1, r/2, c/2);
-      recur(n-1, r/2, c); //r,c : 배열의 길이
-      recur(n-1, r, c/2);
-      recur(n-1, r, c);
+      // 정사각형 범위 안에 (r,c)가 없다면
+      cnt += n * n;
     }
   }
 
@@ -36,10 +45,10 @@ public class BOJ1074 {
     r = Integer.parseInt(st.nextToken());
     c = Integer.parseInt(st.nextToken());
 
-    cnt = 0;
+    cnt = answer = 0;
     int len = (int) Math.pow(2, n);
-    map = new long[len][len];
-    recur(n, len, len);
-    System.out.println((int) map[r][c]);
+
+    recur(len, 0, 0);
+    System.out.println(answer);
   }
 }
