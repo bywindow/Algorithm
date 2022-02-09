@@ -10,9 +10,10 @@ import java.io.*;
  */
 
 //다음 노드와 간선의 가중치를 가지는 노드 클래스 구현
-class Node implements Comparable<Node>{
+class Node implements Comparable<Node> {
     int next, weight;
-    public Node(int next, int weight){
+
+    public Node(int next, int weight) {
         this.next = next;
         this.weight = weight;
     }

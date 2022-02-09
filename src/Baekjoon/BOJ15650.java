@@ -31,7 +31,6 @@ public class BOJ15650 {
     for(int i = 1; i <= n+1-m; i++){
       dfs(i, 1, String.valueOf(i));
     }
-
     System.out.println(sb.toString());
   }
 }
