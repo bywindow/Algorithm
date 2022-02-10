@@ -1,4 +1,4 @@
-package Baekjoon;
+package Dijkstra;
 
 import java.util.*;
 import java.io.*;

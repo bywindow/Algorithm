@@ -1,4 +1,4 @@
-package Baekjoon;
+package BruteForce;
 
 import java.util.*;
 import java.io.*;

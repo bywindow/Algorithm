@@ -1,4 +1,4 @@
-package Baekjoon;
+package Dijkstra;
 
 import java.io.BufferedReader;
 import java.io.IOException;

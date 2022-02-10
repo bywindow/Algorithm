@@ -3,7 +3,7 @@
  * @Algorithm: string
  * @Title: 그룹 단어 체커
  */
-package Baekjoon;
+package String;
 
 
 import java.util.*;

@@ -1,4 +1,4 @@
-package Baekjoon;
+package FloydWarshall;
 
 import java.io.*;
 import java.util.*;

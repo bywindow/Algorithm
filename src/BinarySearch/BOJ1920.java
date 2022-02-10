@@ -1,4 +1,4 @@
-package Baekjoon;
+package BinarySearch;
 
 /**
  * 정수의 범위 : -2^31 ~ 2^31 -> int

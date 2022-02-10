@@ -5,7 +5,7 @@
  *         3과 5로 딱 나누어떨어지도록 담을 수 없는 경우 -1을 반환
  */
 
-package Baekjoon;
+package DP;
 
 import java.util.*;
 import java.io.*;

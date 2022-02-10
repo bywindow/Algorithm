@@ -1,4 +1,4 @@
-package Baekjoon;
+package Greedy;
 
 import java.util.*;
 import java.io.*;

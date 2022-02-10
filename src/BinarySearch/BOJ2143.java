@@ -1,7 +1,7 @@
 /*
 나중에 풀어보자...
  */
-package Baekjoon;
+package BinarySearch;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-//package Baekjoon;
+//package Mathmetics;
 //
 //import java.util.*;
 //import java.io.*;
@@ -13,7 +13,7 @@
 //  }
 //}
 
-package Baekjoon;
+package Mathmetics;
 
 import java.util.*;
 import java.io.*;
