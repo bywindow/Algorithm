@@ -30,7 +30,7 @@ public class BOJ1149 {
       cost[i][2] = b + Math.min(cost[i-1][0], cost[i-1][1]);
     }
     int answer = Integer.MAX_VALUE;
-    // fine min value
+    // find min value
     for(int i : cost[n]){
       answer = Math.min(i, answer);
     }
