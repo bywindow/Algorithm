@@ -14,23 +14,23 @@ public class BOJ21919 {
         int[] nums = new int[n];
         StringTokenizer st = new StringTokenizer(br.readLine());
         int max = 0;
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             nums[i] = Integer.parseInt(st.nextToken());
             max = Math.max(nums[i], max);
         }
-        int[] isPrime = new int[max+1]; //0이면 prime
+        int[] isPrime = new int[max + 1]; //0이면 prime
         isPrime[1] = 1; //1은 소수가 아니다
         long answer = 1;
 
-        for(int i = 2; i*i < isPrime.length; i++){
-            if(isPrime[i] == 1) continue;
-            for(int j = i*2; j < isPrime.length; j+=i){
+        for (int i = 2; i * i < isPrime.length; i++) {
+            if (isPrime[i] == 1) continue;
+            for (int j = i * 2; j < isPrime.length; j += i) {
                 isPrime[j] = 1;
             }
         }
 
-        for(int i = 0; i < nums.length; i++){
-            if(isPrime[nums[i]] == 1) continue;
+        for (int i = 0; i < nums.length; i++) {
+            if (isPrime[nums[i]] == 1) continue;
             answer *= nums[i];
             isPrime[nums[i]] = 1; //같은 수 중복 제거
         }
