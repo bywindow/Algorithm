@@ -1,4 +1,4 @@
-package programmers;
+package String;
 
 public class KakaoStringCompress {
 

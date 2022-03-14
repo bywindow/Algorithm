@@ -28,7 +28,7 @@ public class BOJ21919 {
                 isPrime[j] = 1;
             }
         }
-
+        String str = "";
         for (int i = 0; i < nums.length; i++) {
             if (isPrime[nums[i]] == 1) continue;
             answer *= nums[i];
