@@ -54,6 +54,6 @@ public class BOJ2143 {
 
         recur(T,a,0,b,0,0);
         System.out.println(cnt);
-
+        sc.close();
     }
 }

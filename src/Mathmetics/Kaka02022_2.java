@@ -1,6 +1,4 @@
-package programmers;
-
-import java.util.*;
+package Mathmetics;
 
 public class Kaka02022_2 {
     public static int solution(int n, int k) {

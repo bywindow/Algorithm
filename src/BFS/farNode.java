@@ -1,6 +1,6 @@
 //BFS 탐색 : 특정위치를 기준으로 인접한 노드를 모두 방문하며 한 번 방문했던 노드는 방문 이력을 저장해가면서 다음 노드, 다음노드로 넘어가 전체를 검색하는 방법입니다.
 //참고 : https://gmlwjd9405.github.io/2018/08/15/algorithm-bfs.html 
-package codingtr;
+package BFS;
 import java.util.LinkedList;
 import java.util.Queue;
 
