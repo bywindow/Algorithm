@@ -1,32 +1,49 @@
 package NHN;
 
-import java.io.IOException;
-
-public class TEST_1 {
-
-    public static void solution(int op, String[][] input){
-        int[] tree = new int[100001];
-        tree[1] = 1;
-        for(int i = 0; i < op; i++){
-            if(input[i][0].equals("branch")){
-                for(int j = 1; j < tree.length; j++){
-                    if(tree[j] == 0) {
-                        tree[j] = 1;
-                        break;
-                    }
+class TEST_1 {
+    public int solution(String[] logs) {
+        int answer = 0;
+        String[] taem = {"team_name", "application_name", "error_level", "message"};
+        for(int i = 0; i < logs.length; i++){
+            String curLog = logs[i];
+            if(curLog.length() > 100){
+                answer++;
+                continue;
+            }
+            String[] spl = curLog.split(" : ");
+            if(spl.length != 5){
+                answer++;
+                continue;
+            }
+            if(spl[0] != taem[0]){
+                answer++;
+                continue;
+            }
+            for(int j = 0; j < spl[4].length(); j++){
+                char cur = spl[4].charAt(j);
+                if(cur - 'A' < 0 || 'z' - cur < 0){
+                    answer++;
+                    continue;
                 }
             }
-            else{
-                tree[Integer.parseInt(input[i][1])] = 0;
+            for(int j = 1; j < spl.length-1; j++){
+                String[] next = spl[j].split(" ");
+                // 공백이 있을 때
+                if(next.length != 2){
+                    answer++;
+                    break;
+                }
+                if(!next[1].equals(taem[j])){
+                    answer++;
+                    break;
+                }
             }
         }
-        StringBuilder sb = new StringBuilder();
-        for(int i = 1; i < tree.length; i++){
-            if(tree[i] != 0) sb.append(i).append(" ");
-        }
-        System.out.println(sb);
+        return answer;
     }
-    public static void main(String[] args) throws IOException {
 
+    public static void main(String[] args) {
+        char ch = ' ';
+        System.out.println((int) 'A' + " " + (int) 'a' + " " + (int) ' ');
     }
 }
