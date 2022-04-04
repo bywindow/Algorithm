@@ -1,4 +1,4 @@
-package codingtr;
+package Mathmetics;
 
 import java.util.Scanner;
 
@@ -28,5 +28,6 @@ public class hashad_other {
         Scanner stdin = new Scanner(System.in);
         int arr = stdin.nextInt();
         System.out.println(sn.isHarshad(arr));
+        stdin.close();
     }
 }

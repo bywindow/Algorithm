@@ -1,4 +1,4 @@
-package codingtr;
+package Mathmetics;
 
 import java.util.Scanner;
 
@@ -51,6 +51,7 @@ public class hashad {
             int arr = stdin.nextInt();
             System.out.println(h.hashadAnswer(arr));
             if(arr == 0) break;
+            stdin.close();
         }
     }
 }

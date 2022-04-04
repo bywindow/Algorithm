@@ -1,4 +1,4 @@
-package codingtr;
+package Bootcamp;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class upstairs {
         int n = sc.nextInt();
 
         System.out.println(recur(n));
-
+        sc.close();
     }
 
 }
